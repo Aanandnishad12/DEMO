@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    {% load static %}
+    <!-- <link rel="stylesheet" href="{% static 'ok.css' %}"> -->
+    <style>
+      .ok{
+        color: {{ colour }};
+        text-align: {{ textalling }};
+    
+    }
+    </style>
+<body background="/home/sapat/Pictures/screen short.png">
+
+
+<h2>HTML Forms</h2>
+
+<form action="" method="POST">
+  {% csrf_token %}
+  <label  for="fname">{{ data }}</label><br>
+
+  <input  class="ok" type={{ inputtype }} id="fname" name="fname"><br>
+  <label  class="ok"  for="lname">Enter value B</label><br>
+  <input  type="number" id="lname" name="lname"><br><br>
+  <input type="submit" value="Submit">
+  <!-- {{form }} -->
+
+  <!-- <input type="submit" value="Submit"> -->
+</form> 
+{% if new %}
+<h1 class="ok">The sum is </h1>
+    <h1 class="ok">{{ new }}</h1>
+    <!-- <h1 class="ok">{{ data }}</h1> -->
+
+
+{% endif %}
+<!-- <p class="ok" >Every paragraph will be affected by the style.{{ textalling }}</p> -->
+
+
+</body>
+</html>
